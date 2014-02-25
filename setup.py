@@ -295,7 +295,7 @@ the beginning of your method.
     'Operating System :: OS Independent',
     'Programming Language :: Python',
     'Topic :: Software Development :: Libraries :: Python Modules'],
-  packages=['jsonrpc'],
+  packages=['jsonrpc', 'proxy', 'commons'],
   zip_safe = False, # we include templates and tests
   install_requires=['Django>=1.0'],
   package_data={'jsonrpc': ['templates/*']})

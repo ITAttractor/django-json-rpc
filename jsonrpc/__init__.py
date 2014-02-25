@@ -1,10 +1,13 @@
 import re
 from inspect import getargspec
 from functools import wraps
+
 from django.utils.datastructures import SortedDict
+
 from jsonrpc.site import jsonrpc_site
-from jsonrpc.types import *
+from commons.types import *
 from jsonrpc.exceptions import *
+
 
 default_site = jsonrpc_site
 KWARG_RE = re.compile(
@@ -180,7 +183,6 @@ def jsonrpc_method(name, authenticated=False,
         X['arg_names'] = authentication_arguments + X['arg_names']
         X['name'] = _inject_args(X['name'], ('String', 'String'))
         from django.contrib.auth import authenticate as _authenticate
-        from django.contrib.auth.models import User
       else:
         authenticate = authenticated
       @wraps(func)  

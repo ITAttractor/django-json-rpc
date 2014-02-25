@@ -1,8 +1,10 @@
-from _json import dumps
 from django.http import HttpResponse
 from django.shortcuts import render_to_response
+
+from commons._json import dumps
 from jsonrpc.site import jsonrpc_site
 from jsonrpc import mochikit
+
 
 def browse(request):
   if (request.GET.get('f', None) == 'mochikit.js'):

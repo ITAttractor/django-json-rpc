@@ -44,12 +44,12 @@ settings.configure(**TEST_DEFAULTS)
 
 from django.core import management
 from django.contrib.auth.models import User
-from jsonrpc import jsonrpc_method, _parse_sig, Any, SortedDict
-from jsonrpc.proxy import ServiceProxy
-from jsonrpc._json import loads, dumps
+from jsonrpc import jsonrpc_method, _parse_sig, SortedDict
+from proxy.proxy import ServiceProxy
+from commons._json import loads, dumps
 from jsonrpc.site import validate_params
 from jsonrpc.exceptions import *
-from jsonrpc.types import *
+from commons.types import *
 
 
 def _call(host, req):
