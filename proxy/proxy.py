@@ -1,7 +1,6 @@
 import urllib
 import uuid
 
-from django.test.client import FakePayload
 
 from commons._json import loads, dumps
 from commons.types import *
